@@ -34,12 +34,9 @@ export default function Home() {
           We work with a small group of dedicated adult beginners each month. Book your free strategy session to see if you're a fit.
         </p>
         
-          href="https://calendly.com/chordinated/30min"
-          target="_blank"
-          className="mt-10 inline-block bg-[#D4A017] text-white px-10 py-5 rounded-full text-lg font-bold hover:bg-[#b8891a] transition-colors"
-        >
-          Book Your Free Strategy Session
-        </a>
+     <a href="https://calendly.com/chordinated/30min" target="_blank" className="mt-10 inline-block bg-[#D4A017] text-white px-10 py-5 rounded-full text-lg font-bold hover:bg-[#b8891a] transition-colors">
+  Book Your Free Strategy Session
+</a>
         <p className="mt-4 text-sm text-gray-400">30 minutes. Free. No pressure.</p>
       </section>
 
@@ -132,7 +129,7 @@ export default function Home() {
           Book your free 30-minute strategy session. We'll build your personalized plan and see if we're a good fit. No commitment required.
         </p>
         
-          href="https://calendly.com/james-labrossemusic/30min"
+          <a href="https://calendly.com/james-labrossemusic/30min"
           target="_blank"
           className="mt-8 inline-block bg-white text-[#D4A017] px-10 py-5 rounded-full text-lg font-bold hover:bg-gray-100 transition-colors"
         >
