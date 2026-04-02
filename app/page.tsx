@@ -13,7 +13,7 @@ export default function Home() {
           Chordinated Guitar Academy
         </div>
         
-          href="https://calendly.com/james-labrossemusic/30min"
+         <a href="https://calendly.com/james-labrossemusic/30min"
           target="_blank"
           className="bg-[#D4A017] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-[#b8891a] transition-colors"
         >
@@ -34,7 +34,7 @@ export default function Home() {
           We work with a small group of dedicated adult beginners each month. Book your free strategy session to see if you're a fit.
         </p>
         
-          href="https://calendly.com/james-labrossemusic/30min"
+          href="https://calendly.com/chordinated/30min"
           target="_blank"
           className="mt-10 inline-block bg-[#D4A017] text-white px-10 py-5 rounded-full text-lg font-bold hover:bg-[#b8891a] transition-colors"
         >
