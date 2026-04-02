@@ -3,76 +3,79 @@ export default function Home() {
     <main className="min-h-screen bg-white">
 
       {/* ANNOUNCEMENT BAR */}
-      <div className="bg-[#D4A017] text-white text-center py-2 px-4 text-xs font-medium tracking-widest uppercase">
-        Now accepting new students — Only 5 spots available this month
+      <div className="bg-[#D4A017] text-white text-center py-2 px-4 text-xs font-semibold tracking-widest uppercase">
+        Only 5 spots available this month — First come, first serve
       </div>
 
       {/* NAV */}
-      <nav className="flex justify-between items-center px-8 py-6 max-w-5xl mx-auto border-b border-gray-100">
-        <div className="text-base font-semibold tracking-tight text-[#1a1a2e]">
+      <nav className="flex justify-between items-center px-8 py-5 max-w-5xl mx-auto border-b border-gray-100">
+        <div className="text-sm font-bold tracking-tight text-[#1a1a2e] uppercase">
           Chordinated Guitar Academy
         </div>
-        <a href="https://calendly.com/chordinated/30min" target="_blank" className="text-sm font-semibold text-[#D4A017] hover:opacity-70 transition-opacity">
+        <a href="#book" className="text-sm font-semibold text-[#D4A017] hover:opacity-70 transition-opacity">
           Book Free Session →
         </a>
       </nav>
 
-      {/* HERO */}
-      <section className="max-w-3xl mx-auto px-8 pt-24 pb-20 text-center">
-        <p className="text-xs font-bold uppercase tracking-widest text-[#D4A017] mb-6">
-          Online Guitar Coaching for Adults
-        </p>
-        <h1 className="text-5xl font-bold leading-[1.15] text-[#1a1a2e] mb-6">
-          Finally Make Real Progress on Guitar
-        </h1>
-        <p className="text-xl text-gray-400 font-light max-w-xl mx-auto mb-10 leading-relaxed">
-          Without wasting years figuring it out alone. Private coaching built around you — 100% online.
-        </p>
-        <a href="https://calendly.com/chordinated/30min" target="_blank" className="inline-block bg-[#1a1a2e] text-white px-8 py-4 rounded-full text-sm font-semibold hover:bg-[#D4A017] transition-colors duration-300">
-          Book Your Free Strategy Session
-        </a>
-        <p className="mt-4 text-xs text-gray-400">30 minutes · Free · No commitment</p>
+      {/* HERO + CALENDAR */}
+      <section id="book" className="max-w-5xl mx-auto px-8 py-20">
+        <div className="flex flex-col items-center text-center mb-12">
+          <p className="text-xs font-bold uppercase tracking-widest text-[#D4A017] mb-4">
+            Online Guitar Coaching for Adults
+          </p>
+          <h1 className="text-5xl font-bold leading-tight text-[#1a1a2e] max-w-2xl mb-5">
+            Finally Make Real Progress on Guitar
+          </h1>
+          <p className="text-lg text-gray-400 font-light max-w-xl leading-relaxed">
+            Book your free 30-minute strategy session below. We will build your personalized plan and see if we are a good fit.
+          </p>
+        </div>
+
+        {/* CALENDLY EMBED */}
+        <div className="max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+          <div
+            className="calendly-inline-widget"
+            data-url="https://calendly.com/chordinated/30min"
+            style={{ minWidth: "320px", height: "700px" }}
+          ></div>
+        </div>
+
+        <p className="text-center text-xs text-gray-400 mt-6">30 minutes · Free · No commitment required</p>
       </section>
 
       {/* DIVIDER */}
-      <div className="max-w-5xl mx-auto px-8">
-        <div className="border-t border-gray-100"></div>
-      </div>
+      <div className="max-w-5xl mx-auto px-8"><div className="border-t border-gray-100"></div></div>
 
-      {/* SOCIAL PROOF STRIP */}
-      <section className="max-w-5xl mx-auto px-8 py-10">
-        <div className="flex flex-wrap justify-center gap-10 text-center">
+      {/* SOCIAL PROOF */}
+      <section className="max-w-5xl mx-auto px-8 py-16">
+        <div className="flex flex-wrap justify-center gap-12 text-center">
           <div>
-            <p className="text-2xl font-bold text-[#1a1a2e]">10+</p>
+            <p className="text-3xl font-bold text-[#1a1a2e]">10+</p>
             <p className="text-xs text-gray-400 uppercase tracking-widest mt-1">Years Teaching</p>
           </div>
           <div>
-            <p className="text-2xl font-bold text-[#1a1a2e]">100%</p>
+            <p className="text-3xl font-bold text-[#1a1a2e]">100%</p>
             <p className="text-xs text-gray-400 uppercase tracking-widest mt-1">Online</p>
           </div>
           <div>
-            <p className="text-2xl font-bold text-[#1a1a2e]">Berklee</p>
+            <p className="text-3xl font-bold text-[#1a1a2e]">Berklee</p>
             <p className="text-xs text-gray-400 uppercase tracking-widest mt-1">Graduate</p>
           </div>
           <div>
-            <p className="text-2xl font-bold text-[#1a1a2e]">5</p>
+            <p className="text-3xl font-bold text-[#1a1a2e]">5</p>
             <p className="text-xs text-gray-400 uppercase tracking-widest mt-1">Spots Left</p>
           </div>
         </div>
       </section>
 
       {/* DIVIDER */}
-      <div className="max-w-5xl mx-auto px-8">
-        <div className="border-t border-gray-100"></div>
-      </div>
+      <div className="max-w-5xl mx-auto px-8"><div className="border-t border-gray-100"></div></div>
 
       {/* THIS IS FOR YOU */}
-      <section className="max-w-5xl mx-auto px-8 py-24">
-        <div className="max-w-2xl mx-auto text-center mb-16">
-          <p className="text-xs font-bold uppercase tracking-widest text-[#D4A017] mb-4">Who This Is For</p>
-          <h2 className="text-3xl font-bold text-[#1a1a2e]">You are in the right place if...</h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
+      <section className="max-w-5xl mx-auto px-8 py-24 text-center">
+        <p className="text-xs font-bold uppercase tracking-widest text-[#D4A017] mb-4">Who This Is For</p>
+        <h2 className="text-3xl font-bold text-[#1a1a2e] mb-16">You are in the right place if...</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto text-left">
           {[
             "You have always wanted to play guitar but never made real progress",
             "You have tried YouTube or apps and still feel stuck",
@@ -90,9 +93,7 @@ export default function Home() {
       </section>
 
       {/* DIVIDER */}
-      <div className="max-w-5xl mx-auto px-8">
-        <div className="border-t border-gray-100"></div>
-      </div>
+      <div className="max-w-5xl mx-auto px-8"><div className="border-t border-gray-100"></div></div>
 
       {/* HOW IT WORKS */}
       <section className="max-w-5xl mx-auto px-8 py-24 text-center">
@@ -118,17 +119,13 @@ export default function Home() {
       </section>
 
       {/* DIVIDER */}
-      <div className="max-w-5xl mx-auto px-8">
-        <div className="border-t border-gray-100"></div>
-      </div>
+      <div className="max-w-5xl mx-auto px-8"><div className="border-t border-gray-100"></div></div>
 
       {/* TESTIMONIALS */}
-      <section className="max-w-5xl mx-auto px-8 py-24">
-        <div className="text-center mb-16">
-          <p className="text-xs font-bold uppercase tracking-widest text-[#D4A017] mb-4">Student Results</p>
-          <h2 className="text-3xl font-bold text-[#1a1a2e]">What Students Are Saying</h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <section className="max-w-5xl mx-auto px-8 py-24 text-center">
+        <p className="text-xs font-bold uppercase tracking-widest text-[#D4A017] mb-4">Student Results</p>
+        <h2 className="text-3xl font-bold text-[#1a1a2e] mb-16">What Students Are Saying</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
           <div className="p-8 rounded-2xl bg-gray-50">
             <p className="text-gray-600 text-sm leading-relaxed mb-6">James is a fantastic teacher. Easy going but knows exactly what material to give. He is a Berklee grad with plenty of experience — the real deal. Can play any style or genre. Very reliable and flexible.</p>
             <p className="text-xs font-bold text-[#1a1a2e] uppercase tracking-widest">— Tomas</p>
@@ -149,9 +146,7 @@ export default function Home() {
       </section>
 
       {/* DIVIDER */}
-      <div className="max-w-5xl mx-auto px-8">
-        <div className="border-t border-gray-100"></div>
-      </div>
+      <div className="max-w-5xl mx-auto px-8"><div className="border-t border-gray-100"></div></div>
 
       {/* ABOUT */}
       <section className="max-w-3xl mx-auto px-8 py-24 text-center">
@@ -169,7 +164,7 @@ export default function Home() {
         <p className="text-gray-400 text-base mb-10 max-w-lg mx-auto leading-relaxed">
           Book a free 30-minute strategy session. We will build your personalized plan and see if we are a good fit.
         </p>
-        <a href="https://calendly.com/chordinated/30min" target="_blank" className="inline-block bg-[#D4A017] text-white px-8 py-4 rounded-full text-sm font-semibold hover:bg-[#b8891a] transition-colors duration-300">
+        <a href="#book" className="inline-block bg-[#D4A017] text-white px-8 py-4 rounded-full text-sm font-semibold hover:bg-[#b8891a] transition-colors duration-300">
           Book Your Free Strategy Session
         </a>
         <p className="mt-4 text-xs text-gray-500">Only 5 spots available this month.</p>
