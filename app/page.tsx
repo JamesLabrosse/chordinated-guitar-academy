@@ -1,179 +1,154 @@
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
+    <main style={{fontFamily: 'system-ui, sans-serif', backgroundColor: '#ffffff', margin: 0, padding: 0}}>
 
       {/* ANNOUNCEMENT BAR */}
-      <div className="bg-[#D4A017] text-white text-center py-2 px-4 text-xs font-semibold tracking-widest uppercase">
+      <div style={{backgroundColor: '#D4A017', color: 'white', textAlign: 'center', padding: '10px', fontSize: '13px', fontWeight: '600', letterSpacing: '1px'}}>
         Only 5 spots available this month — First come, first serve
       </div>
 
       {/* NAV */}
-      <nav className="flex justify-between items-center px-8 py-5 max-w-5xl mx-auto border-b border-gray-100">
-        <div className="text-sm font-bold tracking-tight text-[#1a1a2e] uppercase">
+      <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px 40px', borderBottom: '1px solid #f0f0f0', maxWidth: '900px', margin: '0 auto'}}>
+        <div style={{fontSize: '14px', fontWeight: '700', color: '#1a1a2e', letterSpacing: '2px', textTransform: 'uppercase'}}>
           Chordinated Guitar Academy
         </div>
-        <a href="#book" className="text-sm font-semibold text-[#D4A017] hover:opacity-70 transition-opacity">
+        <a href="#book" style={{fontSize: '13px', fontWeight: '600', color: '#D4A017', textDecoration: 'none'}}>
           Book Free Session →
         </a>
-      </nav>
+      </div>
 
-      {/* HERO + CALENDAR */}
-      <section id="book" className="max-w-5xl mx-auto px-8 py-20">
-        <div className="flex flex-col items-center text-center mb-12">
-          <p className="text-xs font-bold uppercase tracking-widest text-[#D4A017] mb-4">
-            Online Guitar Coaching for Adults
-          </p>
-          <h1 className="text-5xl font-bold leading-tight text-[#1a1a2e] max-w-2xl mb-5">
-            Finally Make Real Progress on Guitar
-          </h1>
-          <p className="text-lg text-gray-400 font-light max-w-xl leading-relaxed">
-            Book your free 30-minute strategy session below. We will build your personalized plan and see if we are a good fit.
-          </p>
+      {/* HERO */}
+      <div id="book" style={{maxWidth: '700px', margin: '0 auto', padding: '60px 40px 40px', textAlign: 'center'}}>
+        <p style={{fontSize: '11px', fontWeight: '700', color: '#D4A017', letterSpacing: '3px', textTransform: 'uppercase', marginBottom: '20px'}}>
+          Online Guitar Coaching for Adults
+        </p>
+        <h1 style={{fontSize: '48px', fontWeight: '800', color: '#1a1a2e', lineHeight: '1.15', marginBottom: '20px'}}>
+          Finally Make Real Progress on Guitar
+        </h1>
+        <p style={{fontSize: '18px', color: '#999', lineHeight: '1.7', marginBottom: '40px'}}>
+          Without wasting years figuring it out alone. Private coaching built around you — 100% online.
+        </p>
+      </div>
+
+      {/* CALENDLY */}
+      <div style={{maxWidth: '900px', margin: '0 auto', padding: '0 40px 20px'}}>
+        <div style={{borderRadius: '16px', overflow: 'hidden', border: '1px solid #f0f0f0', boxShadow: '0 4px 24px rgba(0,0,0,0.06)'}}>
+          <iframe
+            src="https://calendly.com/chordinated/30min?embed_domain=chordinatedguitaracademy.com&embed_type=Inline&hide_event_type_details=1&hide_gdpr_banner=1"
+            width="100%"
+            height="700"
+            frameBorder="0"
+            title="Book a Free Strategy Session"
+          ></iframe>
         </div>
-
-        {/* CALENDLY EMBED */}
-        <div className="max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-          <div
-            className="calendly-inline-widget"
-            data-url="https://calendly.com/chordinated/30min"
-            style={{ minWidth: "320px", height: "700px" }}
-          ></div>
-        </div>
-
-        <p className="text-center text-xs text-gray-400 mt-6">30 minutes · Free · No commitment required</p>
-      </section>
-
-      {/* DIVIDER */}
-      <div className="max-w-5xl mx-auto px-8"><div className="border-t border-gray-100"></div></div>
+        <p style={{textAlign: 'center', fontSize: '12px', color: '#bbb', marginTop: '16px'}}>
+          30 minutes · Free · No commitment required
+        </p>
+      </div>
 
       {/* SOCIAL PROOF */}
-      <section className="max-w-5xl mx-auto px-8 py-16">
-        <div className="flex flex-wrap justify-center gap-12 text-center">
-          <div>
-            <p className="text-3xl font-bold text-[#1a1a2e]">10+</p>
-            <p className="text-xs text-gray-400 uppercase tracking-widest mt-1">Years Teaching</p>
+      <div style={{maxWidth: '700px', margin: '60px auto', padding: '0 40px', display: 'flex', justifyContent: 'center', gap: '60px', flexWrap: 'wrap', textAlign: 'center'}}>
+        {[['10+', 'Years Teaching'], ['100%', 'Online'], ['Berklee', 'Graduate'], ['5', 'Spots Left']].map(([num, label]) => (
+          <div key={label}>
+            <div style={{fontSize: '28px', fontWeight: '800', color: '#1a1a2e'}}>{num}</div>
+            <div style={{fontSize: '11px', color: '#aaa', letterSpacing: '2px', textTransform: 'uppercase', marginTop: '4px'}}>{label}</div>
           </div>
-          <div>
-            <p className="text-3xl font-bold text-[#1a1a2e]">100%</p>
-            <p className="text-xs text-gray-400 uppercase tracking-widest mt-1">Online</p>
-          </div>
-          <div>
-            <p className="text-3xl font-bold text-[#1a1a2e]">Berklee</p>
-            <p className="text-xs text-gray-400 uppercase tracking-widest mt-1">Graduate</p>
-          </div>
-          <div>
-            <p className="text-3xl font-bold text-[#1a1a2e]">5</p>
-            <p className="text-xs text-gray-400 uppercase tracking-widest mt-1">Spots Left</p>
-          </div>
-        </div>
-      </section>
+        ))}
+      </div>
 
-      {/* DIVIDER */}
-      <div className="max-w-5xl mx-auto px-8"><div className="border-t border-gray-100"></div></div>
+      <hr style={{maxWidth: '700px', margin: '0 auto', border: 'none', borderTop: '1px solid #f0f0f0'}} />
 
       {/* THIS IS FOR YOU */}
-      <section className="max-w-5xl mx-auto px-8 py-24 text-center">
-        <p className="text-xs font-bold uppercase tracking-widest text-[#D4A017] mb-4">Who This Is For</p>
-        <h2 className="text-3xl font-bold text-[#1a1a2e] mb-16">You are in the right place if...</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto text-left">
+      <div style={{maxWidth: '700px', margin: '0 auto', padding: '80px 40px', textAlign: 'center'}}>
+        <p style={{fontSize: '11px', fontWeight: '700', color: '#D4A017', letterSpacing: '3px', textTransform: 'uppercase', marginBottom: '16px'}}>Who This Is For</p>
+        <h2 style={{fontSize: '32px', fontWeight: '800', color: '#1a1a2e', marginBottom: '48px'}}>You are in the right place if...</h2>
+        <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', textAlign: 'left'}}>
           {[
-            "You have always wanted to play guitar but never made real progress",
-            "You have tried YouTube or apps and still feel stuck",
-            "You want a structured plan, not random exercises",
-            "You want to play songs you actually love",
-            "You are ready to commit and finally make it happen",
-            "You want a coach who meets you exactly where you are"
-          ].map((item, i) => (
-            <div key={i} className="flex items-start gap-3 p-5 rounded-2xl bg-gray-50">
-              <span className="text-[#D4A017] font-bold text-sm mt-0.5">✓</span>
-              <p className="text-gray-600 text-sm leading-relaxed">{item}</p>
+            'You have always wanted to play guitar but never made real progress',
+            'You have tried YouTube or apps and still feel stuck',
+            'You want a structured plan, not random exercises',
+            'You want to play songs you actually love',
+            'You are ready to commit and finally make it happen',
+            'You want a coach who meets you exactly where you are'
+          ].map((item) => (
+            <div key={item} style={{background: '#f9f9f9', borderRadius: '12px', padding: '20px', display: 'flex', gap: '12px', alignItems: 'flex-start'}}>
+              <span style={{color: '#D4A017', fontWeight: '700', fontSize: '14px', marginTop: '1px'}}>✓</span>
+              <p style={{fontSize: '14px', color: '#555', lineHeight: '1.6', margin: 0}}>{item}</p>
             </div>
           ))}
         </div>
-      </section>
+      </div>
 
-      {/* DIVIDER */}
-      <div className="max-w-5xl mx-auto px-8"><div className="border-t border-gray-100"></div></div>
+      <hr style={{maxWidth: '700px', margin: '0 auto', border: 'none', borderTop: '1px solid #f0f0f0'}} />
 
       {/* HOW IT WORKS */}
-      <section className="max-w-5xl mx-auto px-8 py-24 text-center">
-        <p className="text-xs font-bold uppercase tracking-widest text-[#D4A017] mb-4">The Process</p>
-        <h2 className="text-3xl font-bold text-[#1a1a2e] mb-16">Simple. Structured. Effective.</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          <div className="flex flex-col items-center">
-            <div className="w-12 h-12 rounded-full bg-[#1a1a2e] text-white flex items-center justify-center text-sm font-bold mb-5">1</div>
-            <h3 className="text-base font-bold text-[#1a1a2e] mb-2">Free Strategy Session</h3>
-            <p className="text-gray-400 text-sm leading-relaxed">We talk about your goals and see if we are a good fit.</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="w-12 h-12 rounded-full bg-[#1a1a2e] text-white flex items-center justify-center text-sm font-bold mb-5">2</div>
-            <h3 className="text-base font-bold text-[#1a1a2e] mb-2">Your Custom Plan</h3>
-            <p className="text-gray-400 text-sm leading-relaxed">Built around your goals and the music you actually want to play.</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="w-12 h-12 rounded-full bg-[#1a1a2e] text-white flex items-center justify-center text-sm font-bold mb-5">3</div>
-            <h3 className="text-base font-bold text-[#1a1a2e] mb-2">Real Progress</h3>
-            <p className="text-gray-400 text-sm leading-relaxed">Start playing real songs from day one. No fluff, no wasted time.</p>
-          </div>
+      <div style={{maxWidth: '700px', margin: '0 auto', padding: '80px 40px', textAlign: 'center'}}>
+        <p style={{fontSize: '11px', fontWeight: '700', color: '#D4A017', letterSpacing: '3px', textTransform: 'uppercase', marginBottom: '16px'}}>The Process</p>
+        <h2 style={{fontSize: '32px', fontWeight: '800', color: '#1a1a2e', marginBottom: '48px'}}>Simple. Structured. Effective.</h2>
+        <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '40px'}}>
+          {[
+            ['1', 'Free Strategy Session', 'We talk about your goals and see if we are a good fit.'],
+            ['2', 'Your Custom Plan', 'Built around your goals and the music you actually want to play.'],
+            ['3', 'Real Progress', 'Start playing real songs from day one. No fluff, no wasted time.']
+          ].map(([num, title, desc]) => (
+            <div key={num} style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+              <div style={{width: '48px', height: '48px', borderRadius: '50%', backgroundColor: '#1a1a2e', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: '700', fontSize: '14px', marginBottom: '16px'}}>{num}</div>
+              <h3 style={{fontSize: '15px', fontWeight: '700', color: '#1a1a2e', marginBottom: '8px'}}>{title}</h3>
+              <p style={{fontSize: '13px', color: '#999', lineHeight: '1.6', margin: 0}}>{desc}</p>
+            </div>
+          ))}
         </div>
-      </section>
+      </div>
 
-      {/* DIVIDER */}
-      <div className="max-w-5xl mx-auto px-8"><div className="border-t border-gray-100"></div></div>
+      <hr style={{maxWidth: '700px', margin: '0 auto', border: 'none', borderTop: '1px solid #f0f0f0'}} />
 
       {/* TESTIMONIALS */}
-      <section className="max-w-5xl mx-auto px-8 py-24 text-center">
-        <p className="text-xs font-bold uppercase tracking-widest text-[#D4A017] mb-4">Student Results</p>
-        <h2 className="text-3xl font-bold text-[#1a1a2e] mb-16">What Students Are Saying</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-          <div className="p-8 rounded-2xl bg-gray-50">
-            <p className="text-gray-600 text-sm leading-relaxed mb-6">James is a fantastic teacher. Easy going but knows exactly what material to give. He is a Berklee grad with plenty of experience — the real deal. Can play any style or genre. Very reliable and flexible.</p>
-            <p className="text-xs font-bold text-[#1a1a2e] uppercase tracking-widest">— Tomas</p>
-          </div>
-          <div className="p-8 rounded-2xl bg-gray-50">
-            <p className="text-gray-600 text-sm leading-relaxed mb-6">I am a self-taught beginner and still a bit insecure about my playing. I never feel like James thinks he is too good to teach me. His lessons have been really encouraging and I have already seen loads of improvement.</p>
-            <p className="text-xs font-bold text-[#1a1a2e] uppercase tracking-widest">— Ryan N.</p>
-          </div>
-          <div className="p-8 rounded-2xl bg-gray-50">
-            <p className="text-gray-600 text-sm leading-relaxed mb-6">Very knowledgeable and meets his students at their current skill level. He will constantly challenge you to stimulate growth. Highly recommend.</p>
-            <p className="text-xs font-bold text-[#1a1a2e] uppercase tracking-widest">— Nicolas A.</p>
-          </div>
-          <div className="p-8 rounded-2xl bg-gray-50">
-            <p className="text-gray-600 text-sm leading-relaxed mb-6">James has the music theory knowledge to back it up — rare for guitar teachers. Very willing to structure lessons around what I am looking for. Highly recommended.</p>
-            <p className="text-xs font-bold text-[#1a1a2e] uppercase tracking-widest">— Laura F.</p>
-          </div>
+      <div style={{maxWidth: '700px', margin: '0 auto', padding: '80px 40px', textAlign: 'center'}}>
+        <p style={{fontSize: '11px', fontWeight: '700', color: '#D4A017', letterSpacing: '3px', textTransform: 'uppercase', marginBottom: '16px'}}>Student Results</p>
+        <h2 style={{fontSize: '32px', fontWeight: '800', color: '#1a1a2e', marginBottom: '48px'}}>What Students Are Saying</h2>
+        <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', textAlign: 'left'}}>
+          {[
+            ['Tomas', 'James is a fantastic teacher. Easy going but knows exactly what material to give. He is a Berklee grad with plenty of experience — the real deal. Can play any style or genre. Very reliable and flexible.'],
+            ['Ryan N.', 'I am a self-taught beginner and still a bit insecure about my playing. I never feel like James thinks he is too good to teach me. His lessons have been really encouraging and I have already seen loads of improvement.'],
+            ['Nicolas A.', 'Very knowledgeable and meets his students at their current skill level. He will constantly challenge you to stimulate growth. Highly recommend.'],
+            ['Laura F.', 'James has the music theory knowledge to back it up — rare for guitar teachers. Very willing to structure lessons around what I am looking for. Highly recommended.']
+          ].map(([name, quote]) => (
+            <div key={name} style={{background: '#f9f9f9', borderRadius: '16px', padding: '28px'}}>
+              <p style={{fontSize: '14px', color: '#555', lineHeight: '1.7', marginBottom: '20px'}}>{quote}</p>
+              <p style={{fontSize: '11px', fontWeight: '700', color: '#1a1a2e', letterSpacing: '2px', textTransform: 'uppercase', margin: 0}}>— {name}</p>
+            </div>
+          ))}
         </div>
-      </section>
+      </div>
 
-      {/* DIVIDER */}
-      <div className="max-w-5xl mx-auto px-8"><div className="border-t border-gray-100"></div></div>
+      <hr style={{maxWidth: '700px', margin: '0 auto', border: 'none', borderTop: '1px solid #f0f0f0'}} />
 
       {/* ABOUT */}
-      <section className="max-w-3xl mx-auto px-8 py-24 text-center">
-        <p className="text-xs font-bold uppercase tracking-widest text-[#D4A017] mb-4">Your Coach</p>
-        <h2 className="text-3xl font-bold text-[#1a1a2e] mb-6">About James</h2>
-        <p className="text-gray-400 text-base leading-relaxed">
+      <div style={{maxWidth: '600px', margin: '0 auto', padding: '80px 40px', textAlign: 'center'}}>
+        <p style={{fontSize: '11px', fontWeight: '700', color: '#D4A017', letterSpacing: '3px', textTransform: 'uppercase', marginBottom: '16px'}}>Your Coach</p>
+        <h2 style={{fontSize: '32px', fontWeight: '800', color: '#1a1a2e', marginBottom: '24px'}}>About James</h2>
+        <p style={{fontSize: '16px', color: '#999', lineHeight: '1.8'}}>
           James Labrosse is a professional guitarist and Berklee College of Music graduate. With over 10 years of teaching experience, he has helped adult beginners go from zero to playing real music — without the frustration of figuring it out alone. His approach is practical, personalized, and built around the music you actually want to play.
         </p>
-      </section>
+      </div>
 
       {/* FINAL CTA */}
-      <section className="bg-[#1a1a2e] py-24 px-8 text-center">
-        <p className="text-xs font-bold uppercase tracking-widest text-[#D4A017] mb-6">Limited Spots Available</p>
-        <h2 className="text-3xl font-bold text-white mb-4">Ready to Finally Start Playing?</h2>
-        <p className="text-gray-400 text-base mb-10 max-w-lg mx-auto leading-relaxed">
+      <div style={{backgroundColor: '#1a1a2e', padding: '80px 40px', textAlign: 'center'}}>
+        <p style={{fontSize: '11px', fontWeight: '700', color: '#D4A017', letterSpacing: '3px', textTransform: 'uppercase', marginBottom: '16px'}}>Limited Spots Available</p>
+        <h2 style={{fontSize: '36px', fontWeight: '800', color: 'white', marginBottom: '16px'}}>Ready to Finally Start Playing?</h2>
+        <p style={{fontSize: '16px', color: '#888', lineHeight: '1.7', maxWidth: '480px', margin: '0 auto 40px'}}>
           Book a free 30-minute strategy session. We will build your personalized plan and see if we are a good fit.
         </p>
-        <a href="#book" className="inline-block bg-[#D4A017] text-white px-8 py-4 rounded-full text-sm font-semibold hover:bg-[#b8891a] transition-colors duration-300">
+        <a href="#book" style={{display: 'inline-block', backgroundColor: '#D4A017', color: 'white', padding: '16px 36px', borderRadius: '100px', fontSize: '14px', fontWeight: '700', textDecoration: 'none'}}>
           Book Your Free Strategy Session
         </a>
-        <p className="mt-4 text-xs text-gray-500">Only 5 spots available this month.</p>
-      </section>
+        <p style={{fontSize: '12px', color: '#555', marginTop: '16px'}}>Only 5 spots available this month.</p>
+      </div>
 
       {/* FOOTER */}
-      <footer className="bg-[#1a1a2e] border-t border-white/10 py-8 px-8 text-center">
-        <p className="text-xs text-gray-600">© 2026 Chordinated Guitar Academy · James Labrosse · Berklee College of Music Graduate</p>
-      </footer>
+      <div style={{backgroundColor: '#1a1a2e', borderTop: '1px solid #ffffff15', padding: '24px 40px', textAlign: 'center'}}>
+        <p style={{fontSize: '12px', color: '#444', margin: 0}}>© 2026 Chordinated Guitar Academy · James Labrosse · Berklee College of Music Graduate</p>
+      </div>
 
     </main>
   );
