@@ -28,9 +28,12 @@ export default function Home() {
         <p style={{fontSize: '19px', fontWeight: '700', color: '#999', lineHeight: '1.7', marginBottom: '12px'}}>
           I help adult guitarists who feel like something is &ldquo;off&rdquo; in their playing — finally identify what it is, fix it, and play with real confidence and feel.
         </p>
-        <p style={{fontSize: '14px', color: '#bbb', lineHeight: '1.6', marginBottom: '40px'}}>
+        <p style={{fontSize: '14px', color: '#bbb', lineHeight: '1.6', marginBottom: '32px'}}>
           Private coaching, 100% online.
         </p>
+        <a href="#book" style={{display: 'inline-block', backgroundColor: '#D4A017', color: 'white', padding: '16px 36px', borderRadius: '100px', fontSize: '14px', fontWeight: '700', textDecoration: 'none', marginBottom: '40px'}}>
+          Book Your Free Strategy Session
+        </a>
       </div>
 
       {/* CALENDLY */}
@@ -129,8 +132,7 @@ export default function Home() {
       {/* ABOUT */}
       <div style={{maxWidth: '700px', margin: '0 auto', padding: '80px 40px'}}>
         <div style={{display: 'flex', gap: '48px', alignItems: 'center', flexWrap: 'wrap'}}>
-          {/* Add your headshot to /public/james-headshot.jpg and uncomment: */}
-          {/* <img src="/james-headshot.jpg" alt="James Labrosse" style={{width: '260px', height: '260px', objectFit: 'cover', objectPosition: '30% 15%', borderRadius: '16px', flexShrink: 0}} /> */}
+          <img src="/james-headshot.jpg" alt="James Labrosse" style={{width: '260px', height: '260px', objectFit: 'cover', objectPosition: '30% 15%', borderRadius: '16px', flexShrink: 0}} />
           <div style={{flex: 1, minWidth: '220px'}}>
             <p style={{fontSize: '11px', fontWeight: '700', color: '#D4A017', letterSpacing: '3px', textTransform: 'uppercase', marginBottom: '16px'}}>Your Coach</p>
             <h2 style={{fontSize: '32px', fontWeight: '800', color: '#1a1a2e', marginBottom: '24px'}}>About James</h2>
