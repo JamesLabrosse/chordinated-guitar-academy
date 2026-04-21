@@ -13,7 +13,7 @@ export default function Home() {
           Chordinated Guitar Academy
         </div>
         <a href="#book" style={{fontSize: '13px', fontWeight: '600', color: '#D4A017', textDecoration: 'none'}}>
-          Book Free Session →
+          Book Free Strategy Session →
         </a>
       </div>
 
@@ -25,8 +25,11 @@ export default function Home() {
         <h1 style={{fontSize: '48px', fontWeight: '800', color: '#1a1a2e', lineHeight: '1.15', marginBottom: '20px'}}>
           Finally Make Real Progress on Guitar
         </h1>
-        <p style={{fontSize: '18px', color: '#999', lineHeight: '1.7', marginBottom: '40px'}}>
-          Without wasting years figuring it out alone. Private coaching built around you — 100% online.
+        <p style={{fontSize: '19px', fontWeight: '700', color: '#999', lineHeight: '1.7', marginBottom: '12px'}}>
+          I help adult guitarists who feel like something is &ldquo;off&rdquo; in their playing — finally identify what it is, fix it, and play with real confidence and feel.
+        </p>
+        <p style={{fontSize: '14px', color: '#bbb', lineHeight: '1.6', marginBottom: '40px'}}>
+          Private coaching, 100% online.
         </p>
       </div>
 
@@ -62,7 +65,7 @@ export default function Home() {
       <div style={{maxWidth: '700px', margin: '0 auto', padding: '80px 40px', textAlign: 'center'}}>
         <p style={{fontSize: '11px', fontWeight: '700', color: '#D4A017', letterSpacing: '3px', textTransform: 'uppercase', marginBottom: '16px'}}>Who This Is For</p>
         <h2 style={{fontSize: '32px', fontWeight: '800', color: '#1a1a2e', marginBottom: '48px'}}>You are in the right place if...</h2>
-        <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', textAlign: 'left'}}>
+        <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', textAlign: 'left'}}>
           {[
             'You have always wanted to play guitar but never made real progress',
             'You have tried YouTube or apps and still feel stuck',
@@ -71,7 +74,7 @@ export default function Home() {
             'You are ready to commit and finally make it happen',
             'You want a coach who meets you exactly where you are'
           ].map((item) => (
-            <div key={item} style={{background: '#f9f9f9', borderRadius: '12px', padding: '20px', display: 'flex', gap: '12px', alignItems: 'flex-start'}}>
+            <div key={item} style={{background: '#f9f9f9', borderRadius: '12px', padding: '14px 16px', display: 'flex', gap: '10px', alignItems: 'flex-start'}}>
               <span style={{color: '#D4A017', fontWeight: '700', fontSize: '14px', marginTop: '1px'}}>✓</span>
               <p style={{fontSize: '14px', color: '#555', lineHeight: '1.6', margin: 0}}>{item}</p>
             </div>
@@ -124,12 +127,18 @@ export default function Home() {
       <hr style={{maxWidth: '700px', margin: '0 auto', border: 'none', borderTop: '1px solid #f0f0f0'}} />
 
       {/* ABOUT */}
-      <div style={{maxWidth: '600px', margin: '0 auto', padding: '80px 40px', textAlign: 'center'}}>
-        <p style={{fontSize: '11px', fontWeight: '700', color: '#D4A017', letterSpacing: '3px', textTransform: 'uppercase', marginBottom: '16px'}}>Your Coach</p>
-        <h2 style={{fontSize: '32px', fontWeight: '800', color: '#1a1a2e', marginBottom: '24px'}}>About James</h2>
-        <p style={{fontSize: '16px', color: '#999', lineHeight: '1.8'}}>
-          James Labrosse is a professional guitarist and Berklee College of Music graduate. With over 10 years of teaching experience, he has helped adult beginners go from zero to playing real music — without the frustration of figuring it out alone. His approach is practical, personalized, and built around the music you actually want to play.
-        </p>
+      <div style={{maxWidth: '700px', margin: '0 auto', padding: '80px 40px'}}>
+        <div style={{display: 'flex', gap: '48px', alignItems: 'center', flexWrap: 'wrap'}}>
+          {/* Add your headshot to /public/james-headshot.jpg and uncomment: */}
+          {/* <img src="/james-headshot.jpg" alt="James Labrosse" style={{width: '260px', height: '260px', objectFit: 'cover', objectPosition: '30% 15%', borderRadius: '16px', flexShrink: 0}} /> */}
+          <div style={{flex: 1, minWidth: '220px'}}>
+            <p style={{fontSize: '11px', fontWeight: '700', color: '#D4A017', letterSpacing: '3px', textTransform: 'uppercase', marginBottom: '16px'}}>Your Coach</p>
+            <h2 style={{fontSize: '32px', fontWeight: '800', color: '#1a1a2e', marginBottom: '24px'}}>About James</h2>
+            <p style={{fontSize: '16px', color: '#999', lineHeight: '1.8'}}>
+              James Labrosse is a professional guitarist and Berklee College of Music graduate. With over 10 years of teaching experience, he has helped adult beginners go from zero to playing real music — without the frustration of figuring it out alone. His approach is practical, personalized, and built around the music you actually want to play.
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* FINAL CTA */}
