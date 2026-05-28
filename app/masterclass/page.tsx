@@ -66,7 +66,7 @@ export default function MasterclassPage() {
         .mc-booking-header { text-align: center; margin-bottom: 40px; }
         .mc-booking-header h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 700; color: #ffffff; margin-bottom: 12px; }
         .mc-booking-header p { color: #909090; font-size: 0.95rem; max-width: 480px; margin: 0 auto; }
-        .mc-tally-wrapper { border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.06); background: #141414; padding: 32px 24px; }
+        .mc-tally-wrapper { border-radius: 8px; overflow: hidden; border: 1px solid rgba(201,168,76,0.2); background: #f5f0e8; padding: 32px 24px; }
         .mc-testimonials { max-width: 900px; margin: 0 auto; padding: 0 24px 80px; animation: fadeUp 1s ease 0.4s both; }
         .mc-testimonials-header { text-align: center; margin-bottom: 40px; }
         .mc-testimonials-label { font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 13px; letter-spacing: 0.25em; text-transform: uppercase; color: #c9a84c; margin-bottom: 12px; }
