@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect } from 'react';import Script from 'next/script'
 
 export default function MasterclassPage() {
   useEffect(() => {
@@ -86,6 +86,7 @@ export default function MasterclassPage() {
           <div className="mc-divider" />
           <p className="mc-tag">Free Masterclass</p>
         </header>
+        
 
         <section className="mc-hero">
           <h1>Finally Understand Why Your Guitar Playing Is Stuck — <em>And What To Do About It</em></h1>
@@ -114,7 +115,14 @@ export default function MasterclassPage() {
             />
           </div>
         </section>
-
+<section className="mc-optin-section">
+  <Script
+    async
+    data-uid="c826d67711"
+    src="https://chordinated-guitar-academy.kit.com/c826d67711/index.js"
+    strategy="afterInteractive"
+  />
+</section>
         <div className="mc-section-divider">
           <span />
           <p>Ready to take the next step?</p>
