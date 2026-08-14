@@ -1,16 +1,14 @@
 'use client';
 
 import { useEffect } from 'react';
-import Script from 'next/script';
+
+const KIT_FORM_HTML = `<form action="https://app.kit.com/forms/9795225/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9795225" data-uid="c826d67711" data-format="inline" data-version="5" data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;&quot;},&quot;analytics&quot;:{&quot;google&quot;:null,&quot;fathom&quot;:null,&quot;facebook&quot;:null,&quot;segment&quot;:null,&quot;pinterest&quot;:null,&quot;sparkloop&quot;:null,&quot;googletagmanager&quot;:null},&quot;modal&quot;:{&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;powered_by&quot;:{&quot;show&quot;:true,&quot;url&quot;:&quot;https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic&quot;},&quot;recaptcha&quot;:{&quot;enabled&quot;:false},&quot;return_visitor&quot;:{&quot;action&quot;:&quot;hide&quot;,&quot;custom_content&quot;:&quot;&quot;},&quot;slide_in&quot;:{&quot;display_in&quot;:&quot;bottom_right&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;sticky_bar&quot;:{&quot;display_in&quot;:&quot;top&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15}},&quot;version&quot;:&quot;5&quot;}" min-width="400 500 600 700 800" style="border-radius: 6px;"><div data-style="full"><div data-element="column" class="formkit-column"><div class="formkit-header" data-element="header" style="font-size: 20px; font-weight: 700;"><h2>Get the lessons most players never learn</h2></div><div class="formkit-subheader" data-element="subheader" style="font-size: 15px;"><p>Drop your email and I'll send you the free Rhythm Tree PDF, plus deeper breakdowns on time, tone, and harmony — the stuff that separates players who progress from players who plateau.</p></div></div><div data-element="column" class="formkit-column"><ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul><div data-element="fields" class="seva-fields formkit-fields"><div class="formkit-field"><input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Email Address" required="" type="email"></div><button data-element="submit" class="formkit-submit formkit-submit"><div class="formkit-spinner"><div></div><div></div><div></div></div><span class="">Send me the free PDF</span></button></div><div class="formkit-guarantee" data-element="guarantee" style="font-size: 13px; font-weight: 400;"><p>No spam. Just the PDF and lessons worth your time.</p></div><div class="formkit-powered-by-convertkit-container"><a href="https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic" data-element="powered-by" class="formkit-powered-by-convertkit" data-variant="dark" target="_blank" rel="nofollow noopener">Built with Kit</a></div></div></div></form>`;
 
 export default function MasterclassPage() {
   useEffect(() => {
-    // Load Tally embed script
-    const tallyScript = document.createElement('script');
-    tallyScript.src = 'https://tally.so/widgets/embed.js';
-    tallyScript.async = true;
-
     const d = document;
+
+    // --- Load Tally embed script ---
     const w = 'https://tally.so/widgets/embed.js';
     const v = () => {
       if (typeof (window as any).Tally !== 'undefined') {
@@ -30,6 +28,15 @@ export default function MasterclassPage() {
       s.onload = v;
       s.onerror = v;
       d.body.appendChild(s);
+    }
+
+    // --- Load Kit (ConvertKit) embed script so the form submits/validates ---
+    const ckSrc = 'https://f.convertkit.com/ckjs/ck.5.js';
+    if (d.querySelector(`script[src="${ckSrc}"]`) == null) {
+      const ck = d.createElement('script');
+      ck.src = ckSrc;
+      ck.async = true;
+      d.body.appendChild(ck);
     }
 
     return () => {
@@ -60,7 +67,8 @@ export default function MasterclassPage() {
         .mc-video-label { text-align: center; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #c9a84c; margin-bottom: 16px; }
         .mc-video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 8px; overflow: hidden; border: 1px solid rgba(201,168,76,0.15); box-shadow: 0 24px 80px rgba(0,0,0,0.6); }
         .mc-video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
-        .mc-optin-section { max-width: 680px; margin: 48px auto 0; padding: 0 24px; animation: fadeUp 1s ease 0.25s both; }
+        .mc-optin-section { max-width: 640px; margin: 48px auto 0; padding: 0 24px; animation: fadeUp 1s ease 0.25s both; }
+        .mc-optin-label { text-align: center; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #c9a84c; margin-bottom: 16px; }
         .mc-section-divider { max-width: 640px; margin: 64px auto; display: flex; align-items: center; gap: 20px; padding: 0 24px; }
         .mc-section-divider span { flex: 1; height: 1px; background: rgba(255,255,255,0.08); }
         .mc-section-divider p { font-family: 'Playfair Display', serif; font-style: italic; color: #6b6b6b; font-size: 0.9rem; white-space: nowrap; }
@@ -80,6 +88,38 @@ export default function MasterclassPage() {
         .mc-footer { text-align: center; padding: 32px 24px 48px; border-top: 1px solid rgba(255,255,255,0.05); }
         .mc-footer p { font-size: 0.8rem; color: #444; letter-spacing: 0.05em; }
         .mc-footer a { color: #c9a84c; text-decoration: none; }
+
+        /* --- Restyle the Kit form to match the dark theme --- */
+        .mc-optin-section .formkit-form {
+          background-color: #141414 !important;
+          border: 1px solid rgba(201,168,76,0.25) !important;
+          border-radius: 8px !important;
+          box-shadow: 0 24px 80px rgba(0,0,0,0.5) !important;
+          max-width: 100% !important;
+        }
+        .mc-optin-section .formkit-form [data-style="full"] { display: block !important; }
+        .mc-optin-section .formkit-column { background: transparent !important; padding: 28px !important; border: none !important; }
+        .mc-optin-section .formkit-column:nth-child(2) { border-top: 1px solid rgba(255,255,255,0.06) !important; }
+        .mc-optin-section .formkit-header h2 {
+          font-family: 'Playfair Display', serif !important;
+          color: #ffffff !important;
+          font-size: 1.5rem !important;
+        }
+        .mc-optin-section .formkit-subheader p { color: #b0b0b0 !important; font-size: 0.95rem !important; }
+        .mc-optin-section .formkit-input {
+          background: #0e0e0e !important;
+          color: #ffffff !important;
+          border: 1px solid rgba(255,255,255,0.15) !important;
+          border-radius: 4px !important;
+        }
+        .mc-optin-section .formkit-input::placeholder { color: #888 !important; }
+        .mc-optin-section .formkit-submit {
+          background-color: #c9a84c !important;
+          border-radius: 4px !important;
+        }
+        .mc-optin-section .formkit-submit span { color: #0e0e0e !important; font-weight: 700 !important; }
+        .mc-optin-section .formkit-guarantee p { color: #666 !important; }
+
         @media (max-width: 600px) { .mc-learn-list { flex-direction: column; align-items: center; } .mc-learn-item { width: 100%; max-width: 340px; } .mc-testimonials-grid { grid-template-columns: 1fr; } }
       `}</style>
       <div className="mc-body">
@@ -118,12 +158,8 @@ export default function MasterclassPage() {
         </section>
 
         <section className="mc-optin-section">
-          <Script
-            async
-            data-uid="c826d67711"
-            src="https://chordinated-guitar-academy.kit.com/c826d67711/index.js"
-            strategy="afterInteractive"
-          />
+          <p className="mc-optin-label">Free download</p>
+          <div dangerouslySetInnerHTML={{ __html: KIT_FORM_HTML }} />
         </section>
 
         <div className="mc-section-divider">
