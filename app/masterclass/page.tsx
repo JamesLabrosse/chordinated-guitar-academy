@@ -97,27 +97,37 @@ export default function MasterclassPage() {
           box-shadow: 0 24px 80px rgba(0,0,0,0.5) !important;
           max-width: 100% !important;
         }
-        .mc-optin-section .formkit-form [data-style="full"] { display: block !important; }
-        .mc-optin-section .formkit-column { background: transparent !important; padding: 28px !important; border: none !important; }
-        .mc-optin-section .formkit-column:nth-child(2) { border-top: 1px solid rgba(255,255,255,0.06) !important; }
+        /* Force single-column full-width layout regardless of Kit's grid */
+        .mc-optin-section .formkit-form [data-style="full"] { display: block !important; grid-template-columns: none !important; }
+        .mc-optin-section .formkit-column { background: transparent !important; padding: 32px !important; border: none !important; width: 100% !important; }
+        .mc-optin-section .formkit-column:nth-child(2) { border-top: none !important; padding-top: 0 !important; }
         .mc-optin-section .formkit-header h2 {
           font-family: 'Playfair Display', serif !important;
           color: #ffffff !important;
           font-size: 1.5rem !important;
+          margin: 0 0 12px 0 !important;
         }
         .mc-optin-section .formkit-subheader p { color: #b0b0b0 !important; font-size: 0.95rem !important; }
+        .mc-optin-section .formkit-fields { display: block !important; margin-bottom: 12px !important; }
+        .mc-optin-section .formkit-field { width: 100% !important; margin-bottom: 12px !important; }
         .mc-optin-section .formkit-input {
           background: #0e0e0e !important;
           color: #ffffff !important;
           border: 1px solid rgba(255,255,255,0.15) !important;
           border-radius: 4px !important;
+          width: 100% !important;
+          padding: 14px !important;
+          font-size: 15px !important;
         }
         .mc-optin-section .formkit-input::placeholder { color: #888 !important; }
         .mc-optin-section .formkit-submit {
           background-color: #c9a84c !important;
           border-radius: 4px !important;
+          width: 100% !important;
+          margin: 0 !important;
         }
-        .mc-optin-section .formkit-submit span { color: #0e0e0e !important; font-weight: 700 !important; }
+        .mc-optin-section .formkit-submit span { color: #0e0e0e !important; font-weight: 700 !important; padding: 14px 24px !important; }
+        .mc-optin-section .formkit-guarantee { margin-top: 12px !important; }
         .mc-optin-section .formkit-guarantee p { color: #666 !important; }
 
         @media (max-width: 600px) { .mc-learn-list { flex-direction: column; align-items: center; } .mc-learn-item { width: 100%; max-width: 340px; } .mc-testimonials-grid { grid-template-columns: 1fr; } }
