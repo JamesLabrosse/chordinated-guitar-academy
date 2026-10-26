@@ -81,8 +81,10 @@ export default function MasterclassPage() {
         .mc-testimonials-header { text-align: center; margin-bottom: 40px; }
         .mc-testimonials-label { font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 13px; letter-spacing: 0.25em; text-transform: uppercase; color: #c9a84c; margin-bottom: 12px; }
         .mc-testimonials-header h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 700; color: #ffffff; }
-        .mc-testimonial-video { max-width: 760px; margin: 0 auto 40px; }
-        .mc-testimonial-video-caption { text-align: center; font-size: 13px; color: #9a9a9a; margin-top: 14px; }
+        .mc-proof-section { max-width: 760px; margin: 0 auto; padding: 0 24px 64px; text-align: center; animation: fadeUp 1s ease 0.3s both; }
+        .mc-proof-label { font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 13px; letter-spacing: 0.25em; text-transform: uppercase; color: #c9a84c; margin-bottom: 12px; }
+        .mc-proof-section h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 700; color: #ffffff; margin-bottom: 24px; }
+        .mc-proof-caption { font-size: 13px; color: #9a9a9a; margin-top: 14px; }
         .mc-testimonials-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
         .mc-testimonial-card { background: #141414; border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; gap: 20px; }
         .mc-testimonial-text { font-size: 0.95rem; color: #c0c0c0; line-height: 1.7; }
@@ -180,6 +182,22 @@ export default function MasterclassPage() {
           <span />
         </div>
 
+        <section className="mc-proof-section">
+          <p className="mc-proof-label">Student Story</p>
+          <h2>Hear it from a student</h2>
+          <div className="mc-video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/Vaxy01iEfV8"
+              title="Craig's student testimonial"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
+          </div>
+          <p className="mc-proof-caption">Craig, on his experience in the Academy</p>
+        </section>
+
         <section className="mc-booking-section">
           <div className="mc-booking-header">
             <h2>Find Out If You&apos;re a Fit</h2>
@@ -203,19 +221,6 @@ export default function MasterclassPage() {
           <div className="mc-testimonials-header">
             <p className="mc-testimonials-label">Student Results</p>
             <h2>What Students Are Saying</h2>
-          </div>
-          <div className="mc-testimonial-video">
-            <div className="mc-video-wrapper">
-              <iframe
-                src="https://www.youtube.com/embed/Vaxy01iEfV8"
-                title="Craig's student testimonial"
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              />
-            </div>
-            <p className="mc-testimonial-video-caption">Craig, on his experience in the Academy</p>
           </div>
           <div className="mc-testimonials-grid">
             {[
