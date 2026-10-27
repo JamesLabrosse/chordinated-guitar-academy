@@ -1,36 +1,36 @@
-import type { Metadata } from "next";
-import { Geist } from "next/font/google";
-import "./globals.css";
-import Script from "next/script";
-
-const geist = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import type { Metadata } from 'next';
+import Script from 'next/script';
+import './globals.css';
 
 export const metadata: Metadata = {
-  title: "Chordinated Guitar Academy | Online Guitar Lessons for Adults",
-  description: "Private online guitar coaching for adults. Book a free strategy session with James Labrosse, Berklee graduate and professional guitarist.",
+  title: 'Chordinated Guitar Academy | Free Guitar Masterclass',
+  description:
+    'Watch the free masterclass and finally understand why your guitar playing is stuck, and what to do about it.',
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${geist.variable} h-full antialiased`}>
-      <head>
+    <html lang="en">
+      <body>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-PNMK93J3"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
         <Script
-          src="https://assets.calendly.com/assets/external/widget.js"
-          strategy="beforeInteractive"
+          id="gtm"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PNMK93J3');`,
+          }}
         />
-        <link
-          href="https://assets.calendly.com/assets/external/widget.css"
-          rel="stylesheet"
-        />
-      </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+        {children}
+      </body>
     </html>
   );
 }
