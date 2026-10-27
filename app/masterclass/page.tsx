@@ -84,7 +84,7 @@ export default function MasterclassPage() {
         </header>
 
         <section className="mc-hero">
-          <h1>Finally Understand Why Your Guitar Playing Is Stuck, <em>and What To Do About It</em></h1>
+          <h1>You Can Play. <em>You Just Don&apos;t Know Why Any Of It Works.</em></h1>
           <p>Watch this free masterclass for a clear roadmap to real musical understanding, not just more songs to memorize.</p>
         </section>
 
@@ -101,7 +101,7 @@ export default function MasterclassPage() {
         </section>
 
         <div className="mc-cta">
-          <a className="mc-cta-button" href={CALL_URL} target="_blank" rel="noopener noreferrer">Book a Free Strategy Call</a>
+          <a className="mc-cta-button" href={CALL_URL} target="_blank" rel="noopener noreferrer">Book a Call With James</a>
           <p className="mc-cta-note">Free. 30 minutes.</p>
         </div>
 
@@ -123,7 +123,7 @@ export default function MasterclassPage() {
         </section>
 
         <div className="mc-cta">
-          <a className="mc-cta-button" href={CALL_URL} target="_blank" rel="noopener noreferrer">Book a Free Strategy Call</a>
+          <a className="mc-cta-button" href={CALL_URL} target="_blank" rel="noopener noreferrer">Book a Call With James</a>
         </div>
 
         <section className="mc-call-section">
@@ -137,7 +137,7 @@ export default function MasterclassPage() {
         </section>
 
         <div className="mc-cta">
-          <a className="mc-cta-button" href={CALL_URL} target="_blank" rel="noopener noreferrer">Book a Free Strategy Call</a>
+          <a className="mc-cta-button" href={CALL_URL} target="_blank" rel="noopener noreferrer">Book a Call With James</a>
           <p className="mc-cta-note">Free. 30 minutes.</p>
         </div>
 
