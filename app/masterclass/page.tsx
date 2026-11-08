@@ -91,7 +91,7 @@ export default function MasterclassPage() {
         <section className="mc-video-section">
           <div className="mc-video-wrapper">
             <iframe
-              src="https://www.youtube.com/embed/lcc4GFhFSs4?si=qpRE9R7R810IClJE&rel=0"
+              src="https://www.youtube.com/embed/mKK_hZUNcB8?rel=0"
               title="Chordinated Guitar Academy Free Masterclass"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
@@ -125,21 +125,6 @@ export default function MasterclassPage() {
         <div className="mc-cta">
           <a className="mc-cta-button" href={CALL_URL} target="_blank" rel="noopener noreferrer">Book a Call With James</a>
         </div>
-
-        <section className="mc-proof-section">
-          <p className="mc-proof-label">Inside the Academy</p>
-          <h2>See what you will learn</h2>
-          <div className="mc-video-wrapper">
-            <iframe
-              src="https://www.youtube.com/embed/mKK_hZUNcB8?rel=0"
-              title="Inside Chordinated Guitar Academy"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            />
-          </div>
-        </section>
 
         <section className="mc-call-section">
           <h2>What happens on the call</h2>
