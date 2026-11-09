@@ -16,6 +16,18 @@ export default function MasterclassPage() {
       ck.async = true;
       d.body.appendChild(ck);
     }
+
+    // Tell Tag Manager when someone finishes booking inside the Calendly widget
+    const onMessage = (e: MessageEvent) => {
+      if (e.origin !== 'https://calendly.com') return;
+      if (e.data && e.data.event === 'calendly.event_scheduled') {
+        const w = window as unknown as { dataLayer?: unknown[] };
+        w.dataLayer = w.dataLayer || [];
+        w.dataLayer.push({ event: 'calendly_booked' });
+      }
+    };
+    window.addEventListener('message', onMessage);
+    return () => window.removeEventListener('message', onMessage);
   }, []);
 
   return (
