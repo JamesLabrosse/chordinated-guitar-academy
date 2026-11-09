@@ -104,10 +104,18 @@ export default function MasterclassPage() {
           </div>
         </section>
 
-        <div className="mc-cta">
-          <a className="mc-cta-button" href={CALL_URL} target="_blank" rel="noopener noreferrer">Book a Call With James</a>
+        <section className="mc-booking-embed">
           <p className="mc-cta-note">Free. 30 minutes.</p>
-        </div>
+          <div
+            className="calendly-inline-widget"
+            data-url="https://calendly.com/chordinated/30min?hide_gdpr_banner=1&background_color=0d0d0d&text_color=ffffff&primary_color=c8a028"
+            style={{ minWidth: '320px', height: '700px' }}
+          />
+        </section>
+        <Script
+          src="https://assets.calendly.com/assets/external/widget.js"
+          strategy="lazyOnload"
+        />
 
         <section className="mc-proof-section">
           <p className="mc-proof-label">Student Story</p>
@@ -140,18 +148,10 @@ export default function MasterclassPage() {
           </ul>
         </section>
 
-        <section className="mc-booking-embed">
+        <div className="mc-cta">
+          <a className="mc-cta-button" href={CALL_URL} target="_blank" rel="noopener noreferrer">Book a Call With James</a>
           <p className="mc-cta-note">Free. 30 minutes.</p>
-          <div
-            className="calendly-inline-widget"
-            data-url="https://calendly.com/chordinated/30min?hide_gdpr_banner=1&background_color=0d0d0d&text_color=ffffff&primary_color=c8a028"
-            style={{ minWidth: '320px', height: '700px' }}
-          />
-        </section>
-        <Script
-          src="https://assets.calendly.com/assets/external/widget.js"
-          strategy="lazyOnload"
-        />
+        </div>
 
         <section className="mc-optin-section">
           <div dangerouslySetInnerHTML={{ __html: KIT_FORM_HTML }} />
